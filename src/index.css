@@ -1,0 +1,57 @@
+*{
+  margin: 0;padding: 0;box-sizing: border-box;
+}
+
+input{
+  border-radius: 5px;
+}
+
+.pressureHumidityWindContainer{
+
+  background-color: antiquewhite;
+
+}
+.colorOverImage{
+
+  position: relative;
+
+}
+.colorOverImage::before{
+
+  content: "";
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(167, 159, 159, 0.5); /* Adjust the alpha value to control the opacity */
+
+  z-index: -1;
+
+}
+
+
+.backgroundContainer{
+  background-image: url(../src/assets/Photos/cloudyWeather.jpg);
+
+  flex-direction:column;
+  height:100vh;
+
+
+  z-index: 10;
+
+}
+
+.weatherLogo{
+
+  animation: upDown 5s infinite;
+
+}
+
+@keyframes upDown {
+  from{transform: translateY(-20px),}
+  to {transform: translateY(20px)}
+  
+}
+
+
